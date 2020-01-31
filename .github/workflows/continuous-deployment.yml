@@ -27,7 +27,7 @@ jobs:
         if: github.ref == 'refs/heads/develop'
         uses: appleboy/ssh-action@master
         env:
-          KEY: ${{ secrets.SERVER_SSH_KEY }}
+          KEY: ${{ secrets.KEY }}
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
@@ -40,7 +40,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         uses: appleboy/ssh-action@master
         env:
-          KEY: ${{ secrets.SERVER_SSH_KEY }}
+          KEY: ${{ secrets.KEY }}
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
